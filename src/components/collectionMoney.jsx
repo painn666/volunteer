@@ -5,10 +5,11 @@ function Collection({ img, children, totalValue, endDateOfCollection, link }) {
   return (
     <div className="flex flex-col items-center ">
       <img
-        className="aspect-square rounded-t-xl w-full"
-        src={img ? API_URL + img : "Rectangle.png"}
-        alt=""
-      />
+  className="w-full h-[300px] object-contain rounded-t-xl bg-white"
+  src={img ? API_URL + img : "Rectangle.png"}
+  alt=""
+/>
+
       <div className="shadow-[0px_4px_4px_rgba(0,0,0,0.25)]   p-2 gap-3 flex flex-col w-full items-center pb-4 rounded-b-xl ">
         <div className="flex flex-col gap-2 w-full pb-4">
           <div className="h-3">{children}</div>
