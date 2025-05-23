@@ -4,6 +4,7 @@ import LinkTo from "./link";
 import { useModal } from "@/func/modalContext";
 import ModalComponent from "./defaultModalComponent";
 import DragDropInput from "./dragDropInput";
+const API_URL = process.env.NEXT_PUBLIC_URL;
 import BecomeVolunteeerComponent from "./bcmVolunteer";
 import {
   CheckIcon,
@@ -25,7 +26,17 @@ function UserProfile({ data }) {
   return (
     <div className="flex flex-col gap-4 items-center">
       <div className="flex gap-2 items-center p-4">
-        {/* <img src="" alt="" /> */}
+        <img
+          src={
+            API_URL +
+            `${
+              data.gender === true
+                ? "/upload/male_5f4e5816f0.jpg"
+                : "/upload/female_971d3ed037.jpg"
+            }`
+          }
+          alt=""
+        />
         <div className="w-[160px] h-[160px] bg-[var(--link)] rounded-full"></div>
         <div className="flex flex-col gap-2">
           <span className="h1">{data?.surname}</span>
