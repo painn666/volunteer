@@ -22,19 +22,14 @@ function UserProfile({ data }) {
     router.push(`/profile/${route}`);
   };
   console.log(data);
-
+  const isMale = data.gender === true;
+  const isFemale = data.gender === false;
   return (
     <div className="flex flex-col gap-4 items-center">
       <div className="flex gap-2 items-center p-4">
         <img
           className="aspect-square rounded-t-xl w-full object-cover"
-          src={
-            data.gender === false
-              ? "/female.png"
-              : data.gender === true
-              ? "/male.png"
-              : "/default.png" // если значение ещё не пришло
-          }
+          src={isFemale ? "/female.png" : isMale ? "/male.png" : "/default.png"}
           alt=""
         />
 
