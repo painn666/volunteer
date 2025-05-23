@@ -27,10 +27,17 @@ function UserProfile({ data }) {
     <div className="flex flex-col gap-4 items-center">
       <div className="flex gap-2 items-center p-4">
         <img
-          src={data.gender === false ? "/female.png" : "/male.png"}
+          className="aspect-square rounded-t-xl w-full object-cover"
+          src={
+            data.gender === false
+              ? "/female.png"
+              : data.gender === true
+              ? "/male.png"
+              : "/default.png" // если значение ещё не пришло
+          }
           alt=""
-          className="w-[160px] h-[160px] rounded-full"
         />
+
         {/* <div className="w-[160px] h-[160px] bg-[var(--link)] rounded-full"></div> */}
         <div className="flex flex-col gap-2">
           <span className="h1">{data?.surname}</span>
