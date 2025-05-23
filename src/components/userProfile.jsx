@@ -27,7 +27,7 @@ function UserProfile({ data }) {
     <div className="flex flex-col gap-4 items-center">
       <div className="flex gap-2 items-center p-4">
         <img
-          src={data.gender === false ? "/male.png" : "/female.png"}
+          src={Boolean(data.gender) ? "/male.png" : "/female.png"}
           alt=""
           className="w-[160px] h-[160px] rounded-full"
         />
