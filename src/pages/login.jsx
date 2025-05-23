@@ -170,14 +170,6 @@ function LoginPage() {
             >
               ЗАРЕГЕСТРУВАТИСЯ
             </CustomButton>
-            <CustomButton
-              bgColor={"bg-[var(--primary)] "}
-              text={"text-[var(--link)]"}
-              textClass={"h5"}
-              p={"py-2 px-8"}
-            >
-              ВІДНОВИТИ ДОСТУП
-            </CustomButton>
           </div>
         </div>
       ) : (
@@ -214,14 +206,6 @@ function LoginPage() {
               }}
             >
               Увійти
-            </CustomButton>
-            <CustomButton
-              bgColor={"bg-[var(--primary)] "}
-              text={"text-[var(--link)]"}
-              textClass={"h5"}
-              p={"py-2 px-8"}
-            >
-              ВІДНОВИТИ ДОСТУП
             </CustomButton>
           </div>
         </div>
