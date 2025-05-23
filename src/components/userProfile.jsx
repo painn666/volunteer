@@ -31,13 +31,14 @@ function UserProfile({ data }) {
             API_URL +
             `${
               data.gender === true
-                ? "/upload/male_5f4e5816f0.jpg"
-                : "/upload/female_971d3ed037.jpg"
+                ? "/uploads/male_5f4e5816f0.jpg"
+                : "/uploads/female_971d3ed037.jpg"
             }`
           }
           alt=""
+          className="w-[160px] h-[160px] rounded-full"
         />
-        <div className="w-[160px] h-[160px] bg-[var(--link)] rounded-full"></div>
+        {/* <div className="w-[160px] h-[160px] bg-[var(--link)] rounded-full"></div> */}
         <div className="flex flex-col gap-2">
           <span className="h1">{data?.surname}</span>
           <span className="h1"> {data?.firstname}</span>
