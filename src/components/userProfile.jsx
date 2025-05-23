@@ -27,14 +27,7 @@ function UserProfile({ data }) {
     <div className="flex flex-col gap-4 items-center">
       <div className="flex gap-2 items-center p-4">
         <img
-          src={
-            API_URL +
-            `${
-              data.gender === true
-                ? "/uploads/male_5f4e5816f0.jpg"
-                : "/uploads/female_971d3ed037.jpg"
-            }`
-          }
+          src={data.gender === true ? "/male.png" : "female.png"}
           alt=""
           className="w-[160px] h-[160px] rounded-full"
         />
