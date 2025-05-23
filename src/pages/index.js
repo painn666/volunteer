@@ -12,6 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Page() {
-  redirect("/home");
+export async function getServerSideProps() {
+  return {
+    redirect: {
+      destination: "/home",
+      permanent: false,
+    },
+  };
+}
+
+export default function Home() {
+  return null;
 }
